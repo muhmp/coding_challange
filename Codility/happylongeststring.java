@@ -1,3 +1,4 @@
+package Codility;
 // you can also use imports, for example:
 // import java.util.*;
 
