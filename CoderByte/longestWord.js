@@ -28,5 +28,19 @@ console.log(LongestWord("hello I am human"));
 
 
 function LongestWord(sen) { 
+    //regex
+    var regex = sen.match(/\w+/g);
+    //set initiale longest word
+    var longest = regex[0];
+    //compare
+    for (var i =0 ; i<regex.length;i++){
+        if(regex[i].length > longest.length){
+            longest = regex[i]
+        }
+    }
+    //results
+    return longest;
+    }
 
-}
+// keep this function call here 
+console.log(LongestWord(readline()));
