@@ -1,2 +1,9 @@
 # Coding Challange
-coding challange progress from Leetcode/Hackerrank/Codility etc
+
+
+### Source and learning:
+- LeetCode
+- hackerRank
+- Codility
+- CoderByte
+- etc (i.e helping friends coding solution)
