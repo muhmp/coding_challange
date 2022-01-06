@@ -49,8 +49,8 @@
     let totalVelocity = 0;
     const parArr = N.length; //define the length of the 
     
-    for(let i = 0 ; i<parArr;i++){ //for every array of particle example [-1,0,1,3,...]
-        for (let j=0;i+2<parArr&&N[i+1]-N[i] === N[i+2] - N[i+1]; i++){
+    for(let i = 0 ; i<N.length;i++){ //for every array of particle example [-1,0,1,3,...]
+        for (let j=0;i+2< N.length && N[i+1]-N[i] == N[i+2] - N[i+1]; i++){
             j++;
             totalVelocity +=j;
         }
@@ -62,13 +62,12 @@
 
  //total velocity
  console.log(solution([1,3,5,7,9]));
+ console.log(solution([7,7,7,7]));
   
 
 
  /**
   * print normal array
-
-
 
 //solution 2
 function largeInside(num){//get the parameter inside the for loop
