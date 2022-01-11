@@ -1,7 +1,7 @@
 # Coding Challange
 
 
-### Source and learning:
+### Source:
 - LeetCode
 - hackerRank
 - Codility
