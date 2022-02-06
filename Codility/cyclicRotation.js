@@ -4,6 +4,8 @@
  * @param {*} K 
  * @return {array}
  */
+
+/* 
 function cyclicRotation(A,K){
     //if A shifted to by its own length K then just return array
     if(A.length === K || K===0){
@@ -21,3 +23,24 @@ function cyclicRotation(A,K){
 }
 
 console.log(cyclicRotation([1,2,3,2]));
+
+ */
+
+
+//solution 2
+function cyclicRotation(A,K){
+    //if A shifted to by its own length K then just return array
+    K = (A.length > K) ? K : K%A.length;
+
+    //backwarding calculation
+    var d = A.slice(0, A.length-K); //slicing the array from 0 to the end of the array minus K
+    var c = A.slice(A.length-K, A.length);//slicing the array from the end of the array minus K to the end of the array
+    return c.concat(d); //merging the two arrays c & d
+}
+
+
+console.log(cyclicRotation([3,8,9,7,6],4)); 
+
+console.log(cyclicRotation([1,2,3,2],2));
+
+console.log(cyclicRotation([1,2,3,2],1));
