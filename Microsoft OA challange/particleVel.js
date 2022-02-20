@@ -2,36 +2,6 @@
  * Particle velocity
  * 
  */
-
-// const readline = require('readline');
-
-/**
- function particleVelocity(particles) {
-     // WRITE YOUR BRILLIANT CODE HERE
-     let total_periods = 0;
-     const particles_size = particles.length;
-     for (let i = 0; i < particles_size; i++) {
-         for (let count = 0; i + 2 < particles_size && particles[i + 1] - particles[i] === particles[i + 2] - particles[i + 1]; i++) {
-             count++;
-             total_periods += count;
-         }
-     }
-     return total_periods < 1000000000 ? total_periods : -1;
- }
- console.log(particleVelocity([-1,1,3,3,3,2,3,2,1,0]));
- */
-
- /**
- const rl = readline.createInterface(process.stdin);
- rl.on('line', (input) => {
-     rl.close();
-     const particles = input.split(' ').map(x => parseInt(x, 10));
-     console.log(particleVelocity(particles));
- });
-  */
-
-
-
  /**
   * Particle velocity
   * Define:
@@ -47,11 +17,11 @@
  function solution(N){ // particle
     //define velocity
     let totalVelocity = 0;
-    const parArr = N.length; //define the length of the 
+    //const parArr = N.length; //define the length of the array
     
     for(let i = 0 ; i<N.length;i++){ //for every array of particle example [-1,0,1,3,...]
-        for (let j=0;i+2< N.length && N[i+1]-N[i] == N[i+2] - N[i+1]; i++){
-            j++;
+        for (let j=0;i+2< N.length && N[i+1]-N[i] == N[i+2] - N[i+1]; i++){//for every array of particle example [-1,0,1,3,...]
+            j++; //inc
             totalVelocity +=j;
         }
 
@@ -63,8 +33,8 @@
  //total velocity
  console.log(solution([1,3,5,7,9]));
  console.log(solution([7,7,7,7]));
-  
-
+ console.log(solution([3,-1,-5,-9]));
+ console.log(solution([-1,1,3,3,3,2,3,2,1,0]));
 
  /**
   * print normal array
