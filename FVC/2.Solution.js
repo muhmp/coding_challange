@@ -19,46 +19,7 @@
 // N is an integer within the range [4..200];
 // each element of array A is an integer within the range [1..1,000].
 
-
-
- //The problem is solved by creating subarrays of the original array and check whether they are aesthetically pleasing.
-
 //code
 function solution(A) {
-    //define cut and dp equal to zero
-    let cut = 0;
-    //define dp is 0 times the length of the array
-    let dp = Array(A.length).fill(0);
-    //loop through the array
-    for (let i = 0; i < A.length; i++) {
-        //if the current element is less than the previous element
-        if (A[i] < A[i - 1]) {
-            //dp equal to 1
-            dp[i] = 1;
-            //if the current element is less than the previous element
-            if (A[i] < A[i - 2]) {
-                //dp equal to 0
-                dp[i] = 0;
-                //else
-            } else {
-                // dp equal to -1
-                dp[i] = -1;
-            }
 
-    //for loop len dp
-    for (let j = 0; j < dp.length; j++) {
-        //if dp[i-2] == dp[i-1] == dp[i] then return -1
-        if (dp[i - 2] == dp[i - 1] && dp[i - 1] == dp[i] && dp[i-2] == dp[i]) {
-            return -1;
-        }
-        //if dp[i-1] == dp[i] then cut +=3
-        if (dp[i - 1] == dp[i]) {
-            cut += 3;
-            }
-        }
-    }
-    }
 }
-
-//test
-console.log(solution([3, 4, 5, 3, 7]));     //3
