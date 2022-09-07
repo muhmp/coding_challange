@@ -11,4 +11,4 @@ def fizzbuzz(n):
 
 
 # print
-fizzbuzz(15)
+fizzbuzz(16777216)
