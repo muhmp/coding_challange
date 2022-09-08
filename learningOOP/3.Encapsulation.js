@@ -14,4 +14,24 @@ class Dog {
         //Getter
         return this.calcAge();
     }
+    //calculate age method
+    calcAge(){
+        //calculate age using todays date and birthday
+        return this.calcAge();
+    }
+
+    //bark method
+    bark(){
+        return console.log("Woof Woof");
+    }
+    updateAttendance() {
+        //add a day to the dog's attendance days at the petsitters
+        this._attendance++;
+    }
 }
+
+// inisiate a new dog
+const dog1 = new Dog("Rex", "2019-01-01");
+
+//getAge
+console.log(dog1.getAge());
