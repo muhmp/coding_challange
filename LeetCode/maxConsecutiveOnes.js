@@ -28,3 +28,8 @@ function findmaxConsecutives(nums){
 
 //call function
 console.log(findmaxConsecutives([1,1,0,1,1,1])); //output 3
+
+
+
+
+// shift(): The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
