@@ -9,8 +9,8 @@ function twoSum(nums, target){
 
     // using brute force sol : iterate through every possible combination until we find a solution
     //loop
-    for (let i =0;i<nums.length;i++){
-        for(let j=i ; j< nums.length;i++){ //j is equal value with i
+    for (let i =0 ;i<nums.length;i++){
+        for(let j=i+1 ; j< nums.length;i++){ //j is equal value with i plus 1
             //condition
             if(nums[i] + nums[j] == target){
                 return [i,j];
