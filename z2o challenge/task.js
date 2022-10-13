@@ -44,5 +44,11 @@ const axios = request("axios");
 axios.post("http://challenge.z2o.cloud/?nickname=muhammad").then(response=>
 {
     console.log(response.data);
-}).then((text) => console.log(text)).catch((error)=> console.log(error.message))
+        }).then((text) => console.log(text)).catch((error)=> console.log(error.message))
 
+//PUT
+axios.put("http://challenge.z2o.cloud/",{headers:
+{
+    'X-Challenge-ID':'muhmp'}}).then(response => {
+        console.log(response.data)
+    }).catch((error) => console.log(error.message))
