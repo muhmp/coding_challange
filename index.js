@@ -1,6 +1,5 @@
 //Create a program that repeatedly calls a specified HTTP endpoints
 
-const { text } = require("stream/consumers");
 
 /**
  * 1. Start processing
@@ -39,16 +38,20 @@ const { text } = require("stream/consumers");
 
 //Make an HTTP POST request
 
-const axios = request("axios");
+import { POST, PUT } from "axios";
 
-axios.post("http://challenge.z2o.cloud/?nickname=muhammad").then(response=>
+POST("http://challenge.z2o.cloud/?nickname=muhmp").then(response=>
 {
     console.log(response.data);
-        }).then((text) => console.log(text)).catch((error)=> console.log(error.message))
+        }).then((text) => console.log(text)).catch((error)=> console.log(error.message));
 
 //PUT
-axios.put("http://challenge.z2o.cloud/",{headers:
+PUT("http://challenge.z2o.cloud/",{headers:
 {
     'X-Challenge-ID':'muhmp'}}).then(response => {
         console.log(response.data)
-    }).catch((error) => console.log(error.message))
+    }).catch((error) => console.log(error.message));
+
+{
+    data:{}
+}
